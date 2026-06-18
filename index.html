@@ -1,0 +1,1651 @@
+<DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Alfirra, Rumah Terindahku ✨</title>
+    <!-- Google Fonts: Tetap disertakan untuk estetika jika online, dengan fallback font bawaan HP jika offline -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ================= KUSTOM CSS MURNI (OFFLINE-SAFE UNTUK ACODE) ================= */
+        :root {
+            --bg-color: #FAF6F0;
+            --card-bg: #FCFBF9;
+            --border-color: #E6DFD3;
+            --pink-accent: #FFB7B2;
+            --pink-hover: #FF9E99;
+            --pink-light: #FFF0EF;
+            --stone-dark: #4A453F;
+            --stone-muted: #8A8279;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--stone-dark);
+            /* Tekstur kertas kuno */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(250, 246, 240, 0.2) 100%),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+            padding: 1.5rem 1rem;
+        }
+
+        /* Tipografi */
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .font-handwritten {
+            font-family: 'Caveat', cursive, sans-serif;
+        }
+
+        /* Container Utama (Rata Tengah Sempurna) */
+        .main-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Desain Header */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .badge-cerita {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            background-color: rgba(255, 183, 178, 0.25);
+            border: 1px solid rgba(255, 183, 178, 0.4);
+            color: #D36B66;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #FF8A8A, #FF76A3, #B18DFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub-title {
+            font-size: 1.8rem;
+            color: #D36B66;
+            margin-bottom: 2rem;
+        }
+
+        /* Ornamen Pin Kuningan */
+        .brass-pin {
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pin-head {
+            width: 1rem;
+            height: 1rem;
+            background-color: #D9A05B;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            border-bottom: 2px solid #9C672B;
+        }
+
+        .pin-needle {
+            width: 2px;
+            height: 0.8rem;
+            background-color: #A19A91;
+        }
+
+        /* Bingkai Polaroid Utama */
+        .polaroid-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .polaroid-frame {
+            background-color: var(--card-bg);
+            padding: 1.25rem;
+            padding-bottom: 3.5rem;
+            border-radius: 4px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0,0,0,0.06);
+            transform: rotate(2deg);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            width: 100%;
+            max-width: 320px;
+            position: relative;
+        }
+
+        .polaroid-frame:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .polaroid-photo {
+            width: 100%;
+            height: 280px;
+            background-color: #F0EDE6;
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            position: relative;
+            border-radius: 2px;
+        }
+
+        .polaroid-photo img {
+            width: 100%;
+            height: 100%;
+            object-cover: cover;
+        }
+
+        .polaroid-caption {
+            position: absolute;
+            bottom: 0.8rem;
+            left: 1.25rem;
+            right: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .polaroid-text {
+            color: #5A5249;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        /* Selotip Kertas (Washi Tape) */
+        .washi-tape {
+            position: absolute;
+            background: rgba(255, 183, 178, 0.45);
+            backdrop-filter: blur(1px);
+            border-left: 2px dashed rgba(255, 255, 255, 0.6);
+            border-right: 2px dashed rgba(255, 255, 255, 0.6);
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+            height: 1.5rem;
+            z-index: 30;
+        }
+
+        .tape-top {
+            top: -1.25rem;
+            left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            width: 7rem;
+        }
+
+        .tape-bottom-right {
+            bottom: -0.75rem;
+            right: -1rem;
+            transform: rotate(4deg);
+            width: 5rem;
+            background: rgba(254, 217, 155, 0.5);
+        }
+
+        /* Scrapbook Card (3D Offset Shadow) */
+        .scrapbook-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 4px 4px 0px 0px var(--pink-accent);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .scrapbook-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px var(--pink-hover);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: bold;
+            color: var(--stone-dark);
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            color: #D36B66;
+            margin-top: 0.15rem;
+        }
+
+        .card-icon-container {
+            padding: 0.6rem;
+            background-color: var(--pink-light);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 183, 178, 0.3);
+            color: var(--pink-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Live Counter Grid */
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .counter-box {
+            background-color: #FFFFFF;
+            border: 1px solid #ECE7DE;
+            padding: 1rem 0.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 2px 2px 0px 0px rgba(230,223,211,0.5);
+        }
+
+        .counter-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #E27B76;
+            display: block;
+        }
+
+        .counter-label {
+            font-size: 0.65rem;
+            color: var(--stone-muted);
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Input Penyesuai Tanggal */
+        .date-customizer {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 480px) {
+            .date-customizer {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .date-customizer span {
+            font-size: 0.75rem;
+            color: var(--stone-muted);
+            font-style: italic;
+        }
+
+        .date-customizer input[type="date"] {
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.75rem;
+            border: 1px solid #CCC5B9;
+            background-color: #FFFFFF;
+            font-family: inherit;
+            font-size: 0.8rem;
+            color: var(--stone-dark);
+            outline: none;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* Desain Kotak Musik */
+        .music-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 480px) {
+            .music-flex {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .vinyl-wrapper {
+            position: relative;
+        }
+
+        .vinyl-disk {
+            width: 7.5rem;
+            height: 7.5rem;
+            border-radius: 50%;
+            background-color: #1A1A1A;
+            border: 8px solid #FFF3E0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vinyl-groove {
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: 50%;
+            border: 1px solid #2B2B2B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vinyl-label {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            background-color: #FFCDD2;
+            border: 1px solid #FFB2B2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .vinyl-center {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background-color: var(--bg-color);
+        }
+
+        .playing-indicator {
+            position: absolute;
+            top: -0.25rem;
+            right: -0.25rem;
+            background-color: #E27B76;
+            color: white;
+            padding: 0.4rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .playing-indicator.active {
+            transform: scale(1);
+        }
+
+        /* Tombol Romantis Kustom */
+        .btn-romantic {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            background-color: #E27B76;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(226, 123, 118, 0.3);
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-romantic:hover {
+            background-color: #D36B66;
+            transform: translateY(-1px);
+        }
+
+        .btn-romantic:active {
+            transform: scale(0.97);
+        }
+
+        .btn-secondary {
+            background-color: #FFFFFF;
+            color: var(--stone-dark);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .btn-secondary:hover {
+            background-color: #F7F5F0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Canvas Taman Bunga */
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            height: 20rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #FFFDF9, #F3ECD8);
+            border: 1px solid var(--border-color);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            cursor: crosshair;
+        }
+
+        #gardenCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .canvas-tip {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .canvas-badge {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            color: var(--stone-muted);
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Grid Alasan / Diary */
+        .grid-half {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 580px) {
+            .grid-half {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Alasan Card item */
+        .reason-item {
+            background-color: #FFFFFF;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid #ECE7DE;
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease;
+        }
+
+        .reason-item:hover {
+            transform: scale(1.01);
+        }
+
+        .reason-number {
+            padding: 0.15rem 0.5rem;
+            background-color: var(--pink-light);
+            border: 1px solid rgba(255, 183, 178, 0.3);
+            border-radius: 0.5rem;
+            color: #D36B66;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+
+        .reason-text {
+            font-size: 0.75rem;
+            line-height: 1.4;
+            color: var(--stone-dark);
+        }
+
+        /* Timeline Diary */
+        .diary-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .diary-item {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .diary-node-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .diary-node {
+            padding: 0.4rem;
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            color: var(--pink-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .diary-line {
+            width: 2px;
+            flex-grow: 1;
+            background-color: #ECE7DE;
+            margin-top: 0.25rem;
+        }
+
+        .diary-card {
+            background-color: #FFFFFF;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid #ECE7DE;
+            flex-grow: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .diary-date {
+            font-size: 0.6rem;
+            color: var(--stone-muted);
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .diary-title {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--stone-dark);
+            margin: 0.15rem 0;
+        }
+
+        .diary-desc {
+            font-size: 0.75rem;
+            color: var(--stone-muted);
+            line-height: 1.4;
+        }
+
+        /* Polaroid Tambahan Grid */
+        .polaroid-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            justify-items: center;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 480px) {
+            .polaroid-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .mini-polaroid {
+            background-color: var(--card-bg);
+            padding: 0.75rem;
+            padding-bottom: 2.5rem;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.06);
+            width: 14rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .mini-polaroid:hover {
+            transform: scale(1.02) rotate(0deg) !important;
+        }
+
+        .mini-photo-slot {
+            width: 100%;
+            height: 12rem;
+            background-color: #F0EDE6;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mini-photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mini-upload-text {
+            font-size: 0.6rem;
+            color: var(--stone-muted);
+            margin-top: 0.25rem;
+        }
+
+        .mini-polaroid-input {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .mini-polaroid-caption {
+            width: 100%;
+            margin-top: 0.75rem;
+            border: none;
+            border-bottom: 1px dashed #CCC5B9;
+            background-color: transparent;
+            font-family: 'Caveat', cursive;
+            font-size: 1.15rem;
+            text-align: center;
+            color: var(--stone-dark);
+            outline: none;
+        }
+
+        /* Notebook Paper (Buku Harian Kertas Surat) */
+        .letter-notebook-card {
+            background-color: #FCFBF7;
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 4px 4px 0px 0px var(--pink-accent);
+            text-align: center;
+        }
+
+        .letter-paper {
+            background-color: #FCFBF7;
+            background-image: linear-gradient(#E8E5DD 1px, transparent 1px);
+            background-size: 100% 24px;
+            line-height: 24px;
+            border: 1px solid #CCC5B9;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            min-height: 12rem;
+            text-align: left;
+            position: relative;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .letter-paper-margin {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 1.5rem;
+            width: 1px;
+            background-color: #FFA4A2;
+            opacity: 0.5;
+        }
+
+        .letter-content-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.35rem;
+            color: #4A453F;
+            padding-left: 1rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Papan Sticky Notes */
+        .sticky-note-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 480px;
+            margin: 0 auto 2rem auto;
+        }
+
+        @media (min-width: 480px) {
+            .sticky-note-form {
+                flex-direction: row;
+            }
+        }
+
+        .sticky-note-input {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #CCC5B9;
+            font-family: inherit;
+            font-size: 0.85rem;
+            outline: none;
+            background-color: #FFFFFF;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .wishes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        @media (min-width: 480px) {
+            .wishes-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .sticky-note {
+            border: 2px solid transparent;
+            padding: 1.25rem;
+            border-radius: 1.25rem;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.05);
+        }
+
+        .sticky-note:hover {
+            transform: scale(1.02) rotate(0deg) !important;
+        }
+
+        .sticky-note-pin {
+            position: absolute;
+            top: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #FF5E5E;
+            border-radius: 50%;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .sticky-note-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
+            color: #4A453F;
+            line-height: 1.4;
+        }
+
+        .sticky-note-footer {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.6rem;
+            font-weight: bold;
+            color: var(--stone-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-delete-note {
+            background: none;
+            border: none;
+            color: #BBB0A4;
+            cursor: pointer;
+            padding: 0.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-delete-note:hover {
+            color: #FF5E5E;
+        }
+
+        /* Desain Pastel Sticky Notes */
+        .color-pastel-1 { background-color: #FFF5F5; border-color: #FFD2D2; box-shadow: 4px 4px 0px 0px #FFD5D4; transform: rotate(1deg); }
+        .color-pastel-2 { background-color: #FFFBF2; border-color: #FFE6CC; box-shadow: 4px 4px 0px 0px #FEE1B3; transform: rotate(-1deg); }
+        .color-pastel-3 { background-color: #F5F5FC; border-color: #E2E2FC; box-shadow: 4px 4px 0px 0px #DADBFC; transform: rotate(1.5deg); }
+        .color-pastel-4 { background-color: #F2FCF5; border-color: #D3F5DB; box-shadow: 4px 4px 0px 0px #C8EFCF; transform: rotate(-1.5deg); }
+
+        /* Animasi */
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-6px) rotate(1deg); }
+        }
+        @keyframes heartbeat-gentle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+        @keyframes spin-vinyl {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-float { animation: float-gentle 6s ease-in-out infinite; }
+        .animate-heartbeat { animation: heartbeat-gentle 2.5s ease-in-out infinite; }
+        .animate-spin-slow { animation: spin-vinyl 25s linear infinite; }
+
+        /* Floating particles canvas */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas Efek Mengambang Hati & Daun Gugur -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Notifikasi Toast -->
+    <div id="toast" style="position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.75rem; background-color: #FCFBF9; border: 2px solid #E6DFD3; padding: 0.8rem 1.25rem; border-radius: 1rem; box-shadow: 4px 4px 0 0 #FFD5D4;">
+        <span id="toast-icon">❤️</span>
+        <p id="toast-text" style="font-size: 0.8rem; font-weight: bold; color: #4A453F;"></p>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-container">
+
+        <!-- HEADER SECTION -->
+        <header>
+            <!-- Brass Pin Ornament -->
+            <div class="brass-pin">
+                <div class="pin-head"></div>
+                <div class="pin-needle"></div>
+            </div>
+
+            <span class="badge-cerita">
+                <!-- SVG Heart Icon bawaan kode -->
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-heartbeat"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Ruang Cerita Kita
+            </span>
+
+            <h1 class="main-title font-serif">Alfirra.</h1>
+            <p class="sub-title font-handwritten">kamu adalah rumah ternyaman bagiku.</p>
+
+            <!-- POLAROID UTAMA DENGAN FALLBACK DAN INTERAKTIVITAS INPUT FOTO -->
+            <div class="polaroid-wrapper">
+                <div class="polaroid-frame">
+                    <!-- Selotip Kertas Atas -->
+                    <div class="washi-tape tape-top"></div>
+                    
+                    <div class="polaroid-photo">
+                        <!-- Img Utama dengan Fallback SVG Manis jika file tidak ditemukan -->
+                        <img id="mainPhotoImg" src="1000068108.jpg" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 500\' fill=\'%23FAF6F0\'><rect width=\'400\' height=\'500\' fill=\'%23FDFBF7\'/><circle cx=\'200\' cy=\'200\' r=\'80\' fill=\'%23FFE3E3\'/><path d=\'M200 150 C180 110, 110 130, 150 190 L200 240 L250 190 C290 130, 220 110, 200 150 Z\' fill=\'%23FF8A8A\'/><text x=\'200\' y=\'340\' font-size=\'20\' font-family=\'sans-serif\' fill=\'%23888\' text-anchor=\'middle\' font-weight=\'bold\'>Ketuk Untuk Ganti Foto Utama</text><text x=\'200\' y=\'380\' font-size=\'14\' font-family=\'sans-serif\' fill=\'%23A0A0A0\' text-anchor=\'middle\'>atau tempatkan file 1000068108.jpg</text></svg>'" alt="Alfirra dan Aku">
+                        
+                        <!-- Invisible Input File -->
+                        <input type="file" id="mainPhotoInput" style="position: absolute; inset: 0; opacity: 0; cursor: pointer;" accept="image/*">
+                    </div>
+
+                    <div class="polaroid-caption">
+                        <span class="polaroid-text font-handwritten">Bahagia Selamanya • Alfirra &lt;3</span>
+                        <span style="color: #FF8A8A;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+                    </div>
+
+                    <!-- Selotip Kertas Kanan Bawah -->
+                    <div class="washi-tape tape-bottom-right"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD LOVE COUNTER -->
+        <section class="scrapbook-card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title font-serif">Menghitung Detik Bersamamu</h2>
+                    <p class="card-subtitle font-handwritten">setiap hari bersamamu adalah cinta terindah</p>
+                </div>
+                <div class="card-icon-container">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+            </div>
+
+            <!-- Counter Grid -->
+            <div class="counter-grid">
+                <div class="counter-box">
+                    <span id="counter-days" class="counter-value font-serif">00</span>
+                    <span class="counter-label">Hari</span>
+                </div>
+                <div class="counter-box">
+                    <span id="counter-hours" class="counter-value font-serif">00</span>
+                    <span class="counter-label">Jam</span>
+                </div>
+                <div class="counter-box">
+                    <span id="counter-minutes" class="counter-value font-serif">00</span>
+                    <span class="counter-label">Menit</span>
+                </div>
+                <div class="counter-box">
+                    <span id="counter-seconds" class="counter-value font-serif">00</span>
+                    <span class="counter-label">Detik</span>
+                </div>
+            </div>
+
+            <!-- Customizer Tanggal -->
+            <div class="date-customizer">
+                <span>Tanggal jadian kita:</span>
+                <input type="date" id="loveDateInput" value="2024-9-29">
+            </div>
+        </section>
+
+        <!-- KOTAK MUSIK INTERAKTIF -->
+        <section class="scrapbook-card">
+            <div class="music-flex">
+                <div class="vinyl-wrapper">
+                    <div id="musicDisk" class="vinyl-disk">
+                        <div class="vinyl-groove">
+                            <div class="vinyl-label">
+                                <div class="vinyl-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="playingHeart" class="playing-indicator">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="card-title font-serif">Lullaby Kotak Musik Alfirra</h3>
+                    <p style="font-size: 0.75rem; color: var(--stone-muted); margin: 0.4rem 0 1rem 0; line-height: 1.4;">Disintesis langsung secara digital menggunakan Web Audio API, menciptakan bunyi lonceng yang jernih dan manis khusus buatmu.</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: center; justify-content: flex-start;">
+                        <button id="playMusicBtn" class="btn-romantic">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Nyanyikan Melodi
+                        </button>
+                        <button id="stopMusicBtn" class="btn-romantic btn-secondary hidden">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Hentikan Nada
+                        </button>
+                        <span id="synthStatus" class="font-handwritten hidden" style="font-size: 1rem; color: #E27B76; font-weight: bold; animation: heartbeat-gentle 1.5s infinite;">✨ Gelombang detak jantung aktif...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAMAN BUNGA INTERAKTIF -->
+        <section class="scrapbook-card">
+            <div class="card-header" style="margin-bottom: 0.75rem;">
+                <div>
+                    <h2 class="card-title font-serif">Taman Bunga Alfirra &lt;3</h2>
+                    <p class="card-subtitle font-handwritten">sentuh di mana saja untuk menanam bunga kuncup yang mekar</p>
+                </div>
+                <button id="clearGardenBtn" class="card-icon-container" style="background: none; border: 1px solid var(--border-color); cursor: pointer;" title="Sirami / Bersihkan Taman">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+                </button>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="gardenCanvas"></canvas>
+                <div class="canvas-tip">
+                    <span class="canvas-badge font-serif">🌸 Ketuk di mana saja di atas untuk menumbuhkan bunga!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- REASONS & DIARY COLUMN (Dua kolom diatur manual) -->
+        <div class="grid-half">
+            <!-- Kenapa Aku Jatuh Cinta -->
+            <div class="scrapbook-card" style="margin-bottom: 0;">
+                <div class="card-header" style="margin-bottom: 0.5rem;">
+                    <h3 class="card-title font-serif" style="font-size: 1.15rem; display: flex; align-items: center; gap: 0.4rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                        Kenapa Jatuh Cinta?
+                    </h3>
+                </div>
+                <p style="font-size: 0.65rem; color: var(--stone-muted); margin-bottom: 1rem;">Alasan kecil yang membuat duniaku hanya berputar untukmu.</p>
+                
+                <div id="reasonsContainer">
+                    <!-- Diisi Dinamis oleh JS -->
+                </div>
+
+                <button id="moreReasonsBtn" class="btn-romantic btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem; border-radius: 0.75rem; margin-top: 1rem;">
+                    Lihat Alasan Lainnya (Max 6)
+                </button>
+            </div>
+
+            <!-- Buku Harian Kenangan -->
+            <div class="scrapbook-card" style="margin-bottom: 0;">
+                <div class="card-header" style="margin-bottom: 0.5rem;">
+                    <h3 class="card-title font-serif" style="font-size: 1.15rem; display: flex; align-items: center; gap: 0.4rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Buku Harian Kita
+                    </h3>
+                </div>
+                <p style="font-size: 0.65rem; color: var(--stone-muted); margin-bottom: 1rem;">Momen-momen manis yang terabadikan rapi dalam perjalanan cinta.</p>
+
+                <div class="diary-timeline" id="scrapbookContainer">
+                    <!-- Diisi Dinamis oleh JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ALBUM FOTO DIGITAL TAMBAHAN -->
+        <section class="scrapbook-card" style="margin-top: 1.5rem;">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <span class="font-handwritten" style="font-size: 1.5rem; color: #E27B76;">album foto digital</span>
+                <h2 class="card-title font-serif" style="font-size: 1.5rem;">Tambahkan Polaroid Baru</h2>
+                <p style="font-size: 0.7rem; color: var(--stone-muted); margin-top: 0.25rem;">Ganti polaroid di bawah ini dengan foto kenangan kalian berdua langsung dari penyimpanan HP-mu!</p>
+            </div>
+
+            <div class="polaroid-grid">
+                <!-- Slot Polaroid Tambahan 1 -->
+                <div class="mini-polaroid" style="transform: rotate(-1.5deg);">
+                    <div class="washi-tape" style="top: -0.75rem; left: 50%; transform: translateX(-50%) rotate(2deg); width: 4.5rem; height: 1rem;"></div>
+                    
+                    <div class="mini-photo-slot">
+                        <img id="customImgPrev1" class="hidden" alt="Polaroid Kustom">
+                        <div id="uploadPrompt1" style="text-align: center; padding: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CCC5B9" stroke-width="2" style="margin: 0 auto 0.5rem auto;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <span style="font-size: 0.6rem; color: var(--stone-muted); display: block;">Ketuk Unggah Foto</span>
+                        </div>
+                        <input type="file" id="polaroidFile1" class="mini-polaroid-input" accept="image/*">
+                    </div>
+                    <input type="text" placeholder="Tulis caption..." class="mini-polaroid-caption">
+                </div>
+
+                <!-- Slot Polaroid Tambahan 2 -->
+                <div class="mini-polaroid" style="transform: rotate(2deg);">
+                    <div class="washi-tape" style="top: -0.75rem; left: 50%; transform: translateX(-50%) rotate(-2deg); width: 4.5rem; height: 1rem; background: rgba(254, 217, 155, 0.5);"></div>
+                    
+                    <div class="mini-photo-slot">
+                        <img id="customImgPrev2" class="hidden" alt="Polaroid Kustom">
+                        <div id="uploadPrompt2" style="text-align: center; padding: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CCC5B9" stroke-width="2" style="margin: 0 auto 0.5rem auto;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <span style="font-size: 0.6rem; color: var(--stone-muted); display: block;">Ketuk Unggah Foto</span>
+                        </div>
+                        <input type="file" id="polaroidFile2" class="mini-polaroid-input" accept="image/*">
+                    </div>
+                    <input type="text" placeholder="Tulis caption..." class="mini-polaroid-caption">
+                </div>
+            </div>
+        </section>
+
+        <!-- SURAT CINTA (ROMANTIC LETTER) -->
+        <section class="letter-notebook-card">
+            <div style="margin-bottom: 1.5rem;">
+                <div class="card-icon-container" style="display: inline-flex; margin-bottom: 0.5rem;" class="animate-heartbeat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </div>
+                <h2 class="card-title font-serif" style="font-size: 1.5rem;">Surat Dari Relung Hati</h2>
+                <p style="font-size: 0.7rem; color: var(--stone-muted);">Ketuk tombol di bawah untuk membaca janji tulusku padamu.</p>
+            </div>
+
+            <div id="letterPaper" class="letter-paper">
+                <div class="letter-paper-margin"></div>
+                <p id="letterContent" class="letter-content-text">
+                    "Silakan ketuk tombol di bawah untuk membuka lembar surat romantis pertamamu, Alfirra..."
+                </p>
+            </div>
+
+            <button id="openLetterBtn" class="btn-romantic" style="margin-top: 1.5rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Buka Lembaran Surat Baru
+            </button>
+        </section>
+
+        <!-- PAPAN HARAPAN (STICKY NOTES) -->
+        <section class="scrapbook-card" style="margin-top: 2rem;">
+            <h3 class="card-title font-serif" style="text-align: center; font-size: 1.5rem;">Papan Harapan Masa Depan</h3>
+            <p class="font-handwritten" style="text-align: center; font-size: 1.25rem; color: #E27B76; margin-bottom: 1.5rem;">sematkan semua impian kita di bawah ini agar semesta turut mengaminkannya</p>
+
+            <form id="wishForm" class="sticky-note-form">
+                <input type="text" id="wishInput" required placeholder="Tulis doamu di sini..." class="sticky-note-input">
+                <button type="submit" class="btn-romantic" style="border-radius: 0.75rem; padding: 0.6rem 1.25rem; font-size: 0.75rem;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Sematkan Memo
+                </button>
+            </form>
+
+            <div class="wishes-grid" id="wishesGrid">
+                <!-- Sticky Notes akan di-render di sini -->
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer style="text-align: center; padding-top: 2rem; padding-bottom: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem; color: #E27B76; font-size: 0.8rem; margin-bottom: 0.4rem;">
+                <span>Dibuat dengan cinta tak terhingga</span>
+                <span class="animate-heartbeat" style="display: inline-block;">❤️</span>
+                <span>untuk Alfirra</span>
+            </div>
+            <p style="font-size: 0.6rem; color: var(--stone-muted); font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em;">Hak Cipta Abadi &copy; Bahagia Selamanya • 2026</p>
+        </footer>
+
+    </main>
+
+    <!-- SCRIPTS INTERAKTIF -->
+    <script>
+        // --- 1. MEMBUAT EFEK HEART & LEAF FLOATING CANVAS ---
+        const bgCanvas = document.getElementById('bgCanvas');
+        const bgCtx = bgCanvas.getContext('2d');
+        let elements = [];
+
+        function resizeCanvas() {
+            bgCanvas.width = window.innerWidth;
+            bgCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.reset();
+                this.y = Math.random() * bgCanvas.height;
+            }
+            reset() {
+                this.x = Math.random() * bgCanvas.width;
+                this.y = bgCanvas.height + 20;
+                this.size = Math.random() * 8 + 4;
+                this.speed = Math.random() * 0.4 + 0.2;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spinSpeed = Math.random() * 0.02 - 0.01;
+                this.type = Math.random() > 0.5 ? 'heart' : 'sakura';
+                this.color = this.getRandomPastelColor();
+            }
+            getRandomPastelColor() {
+                const pastels = ['#FFB7B2', '#FFDAC1', '#F7E7CE', '#E8D3E8', '#FFC6FF', '#FFEBEB'];
+                return pastels[Math.floor(Math.random() * pastels.length)];
+            }
+            update() {
+                this.y -= this.speed;
+                this.angle += this.spinSpeed;
+                this.x += Math.sin(this.angle) * 0.2;
+                if (this.y < -20) this.reset();
+            }
+            draw() {
+                bgCtx.save();
+                bgCtx.translate(this.x, this.y);
+                bgCtx.rotate(this.angle);
+                bgCtx.fillStyle = this.color;
+                bgCtx.globalAlpha = 0.35;
+
+                if (this.type === 'heart') {
+                    bgCtx.beginPath();
+                    bgCtx.moveTo(0, 0);
+                    bgCtx.bezierCurveTo(-this.size / 2, -this.size / 2, -this.size, this.size / 3, 0, this.size);
+                    bgCtx.bezierCurveTo(this.size, this.size / 3, this.size / 2, -this.size / 2, 0, 0);
+                    bgCtx.fill();
+                } else {
+                    bgCtx.beginPath();
+                    bgCtx.moveTo(0, 0);
+                    bgCtx.quadraticCurveTo(-this.size / 2, this.size / 2, 0, this.size);
+                    bgCtx.quadraticCurveTo(this.size / 2, this.size / 2, 0, 0);
+                    bgCtx.fill();
+                }
+                bgCtx.restore();
+            }
+        }
+
+        for (let i = 0; i < 25; i++) {
+            elements.push(new Particle());
+        }
+
+        function triggerSparkles(x, y) {
+            for (let i = 0; i < 5; i++) {
+                const p = new Particle();
+                p.x = x + (Math.random() * 40 - 20);
+                p.y = y + (Math.random() * 40 - 20);
+                p.speed = Math.random() * 1 + 0.4;
+                p.size = Math.random() * 6 + 4;
+                elements.push(p);
+                if (elements.length > 60) elements.shift();
+            }
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'INPUT' && e.target.id !== 'gardenCanvas') {
+                triggerSparkles(e.clientX, e.clientY);
+            }
+        });
+
+        window.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            if (touch.target.tagName !== 'BUTTON' && touch.target.tagName !== 'INPUT' && touch.target.id !== 'gardenCanvas') {
+                triggerSparkles(touch.clientX, touch.clientY);
+            }
+        }, { passive: true });
+
+        function animateBg() {
+            bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+            elements.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateBg);
+        }
+        animateBg();
+
+
+        // --- 2. AUDIO SYNTHESIZER (KOTAK MUSIK TANPA FILE MP3) ---
+        let audioCtx = null;
+        let playInterval = null;
+        let isMusicPlaying = false;
+
+        const musicMelody = [
+            { note: 'E5', duration: 0.6, delay: 0 },
+            { note: 'G5', duration: 0.6, delay: 0.6 },
+            { note: 'C6', duration: 1.2, delay: 1.2 },
+            { note: 'B5', duration: 0.6, delay: 2.4 },
+            { note: 'A5', duration: 0.6, delay: 3.0 },
+            { note: 'G5', duration: 1.2, delay: 3.6 },
+            { note: 'F5', duration: 0.6, delay: 4.8 },
+            { note: 'A5', duration: 0.6, delay: 5.4 },
+            { note: 'D6', duration: 1.2, delay: 6.0 },
+            { note: 'C6', duration: 0.6, delay: 7.2 },
+            { note: 'B5', duration: 0.6, delay: 7.8 },
+            { note: 'G5', duration: 1.2, delay: 8.4 }
+        ];
+
+        const noteFreqs = {
+            'E5': 659.25, 'F5': 698.46, 'G5': 783.99, 'A5': 880.00, 'B5': 987.77, 'C6': 1046.50, 'D6': 1174.66
+        };
+
+        const musicDisk = document.getElementById('musicDisk');
+        const playingHeart = document.getElementById('playingHeart');
+        const playMusicBtn = document.getElementById('playMusicBtn');
+        const stopMusicBtn = document.getElementById('stopMusicBtn');
+        const synthStatus = document.getElementById('synthStatus');
+
+        function playTone(freq, duration, time) {
+            if (!audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, time);
+
+            gainNode.gain.setValueAtTime(0, time);
+            gainNode.gain.linearRampToValueAtTime(0.18, time + 0.015);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, time + duration);
+
+            osc.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            osc.start(time);
+            osc.stop(time + duration);
+        }
+
+        function playMusicSequence() {
+            if (!audioCtx) return;
+            const startTime = audioCtx.currentTime + 0.1;
+            musicMelody.forEach((noteObj) => {
+                const freq = noteFreqs[noteObj.note];
+                const playTime = startTime + noteObj.delay;
+                playTone(freq, noteObj.duration * 2.5, playTime);
+            });
+        }
+
+        function startMusic() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            isMusicPlaying = true;
+            musicDisk.classList.add('animate-spin-slow');
+            playingHeart.classList.add('active');
+            playMusicBtn.classList.add('hidden');
+            stopMusicBtn.classList.remove('hidden');
+            synthStatus.classList.remove('hidden');
+
+            playMusicSequence();
+            playInterval = setInterval(playMusicSequence, 12000);
+            showToast("Memainkan musik kotak kayu... 🎶", "🎵");
+        }
+
+        function stopMusic() {
+            isMusicPlaying = false;
+            musicDisk.classList.remove('animate-spin-slow');
+            playingHeart.classList.remove('active');
+            playMusicBtn.classList.remove('hidden');
+            stopMusicBtn.classList.add('hidden');
+            synthStatus.classList.add('hidden');
+            if (playInterval) clearInterval(playInterval);
+            showToast("Kotak musik diistirahatkan.", "🤍");
+        }
+
+        playMusicBtn.addEventListener('click', startMusic);
+        stopMusicBtn.addEventListener('click', stopMusic);
+
+
+        // --- 3. FLOWER GARDEN CANVAS INTERACTIVE ---
+        const gardenCanvas = document.getElementById('gardenCanvas');
+        const gCtx = gardenCanvas.getContext('2d');
+        let flowers = [];
+
+        function resizeGardenCanvas() {
+            const rect = gardenCanvas.getBoundingClientRect();
+            gardenCanvas.width = rect.width;
+            gardenCanvas.height = rect.height;
+            drawGarden();
+        }
+        window.addEventListener('resize', resizeGardenCanvas);
+        setTimeout(resizeGardenCanvas, 200);
+
+        class Flower {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.size = 0;
+                this.maxSize = Math.random() * 14 + 10;
+                this.petals = Math.floor(Math.random() * 2) + 5;
+                this.color = this.getRandomFlowerColor();
+                this.growthSpeed = Math.random() * 0.3 + 0.15;
+                this.swayAngle = Math.random() * 10;
+                this.swaySpeed = Math.random() * 0.012 + 0.008;
+            }
+            getRandomFlowerColor() {
+                const colors = [
+                    { petal: '#FFB7B2', center: '#FFF2F2' },
+                    { petal: '#FFDAC1', center: '#FFFBEA' },
+                    { petal: '#E8D3E8', center: '#FFF2FF' },
+                    { petal: '#FFC6FF', center: '#FFFFF2' }
+                ];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                if (this.size < this.maxSize) this.size += this.growthSpeed;
+                this.swayAngle += this.swaySpeed;
+            }
+            draw() {
+                gCtx.save();
+                gCtx.translate(this.x + Math.sin(this.swayAngle) * 2, this.y);
+
+                // Tangkai Bunga
+                gCtx.strokeStyle = '#D1E8C4';
+                gCtx.lineWidth = 2;
+                gCtx.beginPath();
+                gCtx.moveTo(0, 0);
+                gCtx.quadraticCurveTo(-3, 15, -1, 35);
+                gCtx.stroke();
+
+                // Mahkota Bunga
+                for (let i = 0; i < this.petals; i++) {
+                    const angle = (i * Math.PI * 2) / this.petals;
+                    gCtx.fillStyle = this.color.petal;
+                    gCtx.beginPath();
+                    const px = Math.cos(angle) * (this.size * 0.6);
+                    const py = Math.sin(angle) * (this.size * 0.6);
+                    gCtx.arc(px, py, this.size * 0.4, 0, Math.PI * 2);
+                    gCtx.fill();
+                }
+
+                // Putik Tengah
+                gCtx.fillStyle = this.color.center;
+                gCtx.beginPath();
+                gCtx.arc(0, 0, this.size * 0.25, 0, Math.PI * 2);
+                gCtx.fill();
+                gCtx.restore();
+            }
+        }
+
+        function plantFlower(clientX, clientY) {
+            const rect = gardenCanvas.getBoundingClientRect();
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
+            if (flowers.length < 50) {
+                flowers.push(new Flower(x, y));
+                showToast("Bunga tulip mekar! 🌸", "🌷");
+            } else {
+                showToast("Taman kita penuh cinta! ❤️", "✨");
+            }
+        }
+
+        gardenCanvas.addEventListener('click', (e) => plantFlower(e.clientX, e.clientY));
+        gardenCanvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            const touch = e.touches[0];
+            plantFlower(touch.clientX, touch.clientY);
+        }, { passive: false });
+
+        document.getElementById('clearGardenBtn').addEventListener('click', () => {
+            flowers = [];
+            showToast("Siraman air menyapu taman! 💦", "🌸");
+        });
+
+        function drawGarden() {
+            gCtx.clearRect(0, 0, gardenCanvas.width, gardenCanvas.height);
+            flowers.forEach(f => {
+                f.update();
+                f.draw();
+            });
+            requestAnimationFrame(drawGarden);
+        }
+
+
+        // --- 4. INPUT FOTO POLAROID DENGAN FILEREADER ---
+        function setupPolaroid(inputEl, imgEl, promptEl) {
+            inputEl.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        imgEl.src = event.target.result;
+                        imgEl.classList.remove('hidden');
+                        if (promptEl) promptEl.classList.add('hidden');
+                        showToast("Foto kenangan terpasang! 📸", "✨");
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        setupPolaroid(document.getElementById('mainPhotoInput'), document.getElementById('mainPhotoImg'), null);
+        setupPolaroid(document.getElementById('polaroidFile1'), document.getElementById('customImgPrev1'), document.getElementById('uploadPrompt1'));
+        setupPolaroid(document.getElementById('polaroidFile2'), document.getElementById('customImgPrev2'), document.getElementById('uploadPrompt2'));
+
+
+        // --- 5. RENDER DIARY & REASONS ---
+        const reasonsList = [
+            "Caramu tersenyum dan memicingkan mata kecilmu saat menatapku jahil.",
+            "Tudung hijab hangatmu dan bagaimana caramu selalu merapikan bajuku secara perhatian.",
+            "Kelembutan hatimu yang senantiasa menepis semua kekhawatiranku dalam hidup.",
+            "Caramu memanggil namaku yang terasa seperti melodi paling menenangkan jiwaku.",
+            "Kehangatan genggaman tanganmu ketika kita menyusuri petualangan bersama.",
+            "Sabar tiada akhirmu dalam memeluk semua sisi rapuh dan kekuranganku."
+        ];
+
+        const diaryTimeline = [
+            { title: "Detak Jantung Pertama", desc: "Pertemuan yang melahirkan awal rona cinta.", date: "2023-2024", icon: "✨" },
+            { title: "Panggilan Dua Jiwa", desc: "Kita akhirnya saling memahami satu sama lain.", date: "29 Sep 2024", icon: "👥" },
+            { title: "Komitmen Bersama", desc: "Janji suci untuk melangkah melewati segala badai dunia.", date: "2026", icon: "🤝" }
+        ];
+
+        const lettersList = [
+            "Alfirra sayang... Terimakasih banyak ya sudah sudi melangkah bersama denganku sejauh ini. Menatap foto kita selalu membuatku sadar betapa beruntungnya diriku memiliki seorang bidadari hangat di sisiku. Aku berjanji akan menjagamu selamanya.",
+            "Sayangku Alfirra, di saat dunia terasa berat dan membuatmu letih, ingatlah bahwa kamu selalu memiliki rumah hangat di pundakku. Aku sangat bangga padamu atas segala kebaikan hatimu.",
+            "Hai bidadari manis, Alfirra. Kamu tahu? Foto kebersamaan kita adalah harta karun paling berharga yang kusimpan di memori terdalam. Aku menyayangimu kemarin, hari ini, esok, dan selama-lamanya."
+        ];
+
+        // Render Reasons
+        let visibleCount = 3;
+        function renderReasons() {
+            const container = document.getElementById('reasonsContainer');
+            container.innerHTML = '';
+            for (let i = 0; i < visibleCount; i++) {
+                if (!reasonsList[i]) break;
+                container.innerHTML += `
+                    <div class="reason-item">
+                        <span class="reason-number">${i + 1}</span>
+                        <p class="reason-text">${reasonsList[i]}</p>
+                    </div>
+                `;
+            }
+        }
+
+        document.getElementById('moreReasonsBtn').addEventListener('click', () => {
+            if (visibleCount < reasonsList.length) {
+                visibleCount += 3;
+                renderReasons();
+                showToast("Lembaran cinta baru dibuka! 💌", "❤️");
+            } else {
+                visibleCount = 3;
+                renderReasons();
+                showToast("Lembaran ditata kembali.", "🔄");
+            }
+        });
+
+        // Render Diaries
+        const diaryContainer = document.getElementById('scrapbookContainer');
+        diaryTimeline.forEach(item => {
+            diaryContainer.innerHTML += `
+                <div class="diary-item">
+                    <div class="diary-node-wrapper">
+                        <div class="diary-node">${item.icon}</div>
+                        <div class="diary-line"></div>
+                    </div>
+                    <div class="diary-card">
+                        <span class="diary-date">${item.date}</span>
+                        <h4 class="diary-title">${item.title}</h4>
+                        <p class="diary-desc">${item.desc}</p>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Letter Generator
+        let letterIdx = 0;
+        document.getElementById('openLetterBtn').addEventListener('click', () => {
+            const paper = document.getElementById('letterContent');
+            paper.style.opacity = 0;
+            setTimeout(() => {
+                paper.innerText = lettersList[letterIdx];
+                paper.style.opacity = 1;
+                letterIdx = (letterIdx + 1) % lettersList.length;
+            }, 300);
+            showToast("Sepucuk surat cinta terbuka 💌", "🌸");
+        });
+
+        renderReasons();
+
+
+        // --- 6. LIVE TIMER JADIAN ---
+        const loveDateInput = document.getElementById('loveDateInput');
+        const savedDate = localStorage.getItem('love_anniversary_date');
+        if (savedDate) loveDateInput.value = savedDate;
+
+        function updateLoveCounter() {
+            const startDate = new Date(loveDateInput.value);
+            const now = new Date();
+            const diffMs = now - startDate;
+
+            if (diffMs < 0) {
+                document.querySelectorAll('.counter-value').forEach(el => el.innerText = "00");
+                return;
+            }
+
+            const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+            document.getElementById('counter-days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('counter-hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('counter-minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('counter-seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+
+        loveDateInput.addEventListener('change', () => {
+            localStorage.setItem('love_anniversary_date', loveDateInput.value);
+            updateLoveCounter();
+            showToast("Waktu kenangan disinkronkan!", "📅");
+        });
+        setInterval(updateLoveCounter, 1000);
+        updateLoveCounter();
+
+
+        // --- 7. STICKY NOTES HARAPAN SYSTEM ---
+        const wishForm = document.getElementById('wishForm');
+        const wishInput = document.getElementById('wishInput');
+        const wishesGrid = document.getElementById('wishesGrid');
+
+        let wishes = [
+            "Semoga kita selalu diberi kesehatan dan kelancaran untuk membangun bahtera rumah tangga impian.",
+            "Ingin terus mendengar tawa manjamu, Alfirra, di setiap pagi saat aku terbangun kelak.",
+            "Semoga rasa cinta di hati kita terus mekar, seindah bunga di taman impian."
+        ];
+
+        const savedWishes = localStorage.getItem('alfirra_wishes_board');
+        if (savedWishes) wishes = JSON.parse(savedWishes);
+
+        function renderWishes() {
+            wishesGrid.innerHTML = '';
+            wishes.forEach((wish, idx) => {
+                const colorIdx = (idx % 4) + 1;
+                wishesGrid.innerHTML += `
+                    <div class="sticky-note color-pastel-${colorIdx}">
+                        <div class="sticky-note-pin"></div>
+                        <p class="sticky-note-text">"${wish}"</p>
+                        <div class="sticky-note-footer">
+                            <span>#HarapanKita</span>
+                            <button onclick="deleteWish(${idx})" class="btn-delete-note">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        wishForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = wishInput.value.trim();
+            if (text) {
+                wishes.unshift(text);
+                localStorage.setItem('alfirra_wishes_board', JSON.stringify(wishes));
+                renderWishes();
+                wishInput.value = '';
+                showToast("Harapan berhasil disematkan! 📌", "✨");
+            }
+        });
+
+        window.deleteWish = function(index) {
+            wishes.splice(index, 1);
+            localStorage.setItem('alfirra_wishes_board', JSON.stringify(wishes));
+            renderWishes();
+            showToast("Harapan dicabut dari papan.", "🗑️");
+        }
+
+        renderWishes();
+
+
+        // --- 8. TOAST SYSTEM ---
+        const toast = document.getElementById('toast');
+        const toastIcon = document.getElementById('toast-icon');
+        const toastText = document.getElementById('toast-text');
+        let toastTimer = null;
+
+        function showToast(text, icon = '❤️') {
+            if (toastTimer) clearTimeout(toastTimer);
+            toastIcon.innerText = icon;
+            toastText.innerText = text;
+            toast.style.transform = 'translateY(0)';
+            toast.style.opacity = '1';
+            toastTimer = setTimeout(() => {
+                toast.style.transform = 'translateY(100px)';
+                toast.style.opacity = '0';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+
+```
